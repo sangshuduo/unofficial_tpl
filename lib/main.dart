@@ -33,12 +33,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: UnofficialTPLca(),
+      home: const UnofficialTPLca(),
     );
   }
 }
 
 class UnofficialTPLca extends StatefulWidget {
+    const UnofficialTPLca({super.key});
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
   // how it looks.
@@ -51,7 +52,7 @@ class UnofficialTPLca extends StatefulWidget {
   final String title = 'Unofficial tpl.ca app';
 
   @override
-  _UnofficialTPLcaState createState() => _UnofficialTPLcaState();
+  State<UnofficialTPLca> createState() => _UnofficialTPLcaState();
 }
 
 class _UnofficialTPLcaState extends State<UnofficialTPLca> {
@@ -69,7 +70,7 @@ class _UnofficialTPLcaState extends State<UnofficialTPLca> {
           appBar: AppBar(
             title: Text(widget.title),
           ),
-          body: WebView(
+          body: const WebView(
             initialUrl: 'https://tpl.ca',
             javascriptMode: JavascriptMode.unrestricted,),
         );
